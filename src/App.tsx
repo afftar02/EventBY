@@ -1,5 +1,12 @@
+import Auth from './auth';
+import AppRoutes from './Routes';
+
 function App() {
-    return <div>App</div>;
+  return (
+    <Auth>
+      <AppRoutes />
+    </Auth>
+  );
 }
 
 export default App;
