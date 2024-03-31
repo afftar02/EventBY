@@ -1,6 +1,8 @@
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { PATHS } from 'constants/paths';
 import Authorization from 'pages/Authorization';
+import Home from 'pages/Home';
+import AuthorizedRoute from 'utils/AuthorizedRoute';
 import UnauthorizedRoute from 'utils/UnauthorizedRoute';
 
 function AppRoutes() {
@@ -15,6 +17,14 @@ function AppRoutes() {
           <UnauthorizedRoute>
             <Authorization />
           </UnauthorizedRoute>
+        }
+      />
+      <Route
+        path={PATHS.home}
+        element={
+          <AuthorizedRoute>
+            <Home />
+          </AuthorizedRoute>
         }
       />
     </Routes>
