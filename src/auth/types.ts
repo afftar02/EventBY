@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 
+import { UserType } from '../types/user';
+
 export type AuthProps = {
   children: ReactNode;
 };
@@ -18,10 +20,10 @@ export type LoginParams = {
 
 export type AuthContextType = {
   isAuth: boolean;
-  // register: (data: RegisterParams) => Promise<void>;
-  // login: (data: LoginParams) => Promise<void>;
-  // logout: () => void;
-  // user: UserType | null;
+  register: (data: RegisterParams) => Promise<void>;
+  login: (data: LoginParams) => Promise<void>;
+  logout: () => void;
+  user: UserType | null;
   // getUserName: () => string;
   // loadUser: () => Promise<void>;
   // checkAuthenticated: () => Promise<void>;

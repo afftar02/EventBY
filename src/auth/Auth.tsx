@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
+import { UserType } from 'types/user';
 
 // import { loginUser, registerUser } from 'services/authService';
 // import { getCurrentUser } from 'services/userService';
@@ -10,26 +11,26 @@ export const useAuth = () => useContext(AuthContext);
 
 function Auth({ children }: AuthProps) {
   const [isAuth, setIsAuth] = useState(false);
-  // const [user, setUser] = useState<UserType | null>(null);
+  const [user, setUser] = useState<UserType | null>(null);
   const [isAuthChecked, setIsAuthChecked] = useState(false);
 
-  // const login = async (data: LoginParams) => {
-  //   await loginUser(data);
-  //   setIsAuth(true);
-  //   await loadUser();
-  // };
+  const login = async (/* data: LoginParams */) => {
+    // await loginUser(data);
+    setIsAuth(true);
+    // await loadUser();
+  };
 
-  // const register = async (data: RegisterParams) => {
-  //   await registerUser(data);
-  //   setIsAuth(true);
-  //   await loadUser();
-  // };
+  const register = async (/* data: RegisterParams */) => {
+    // await registerUser(data);
+    setIsAuth(true);
+    // await loadUser();
+  };
 
-  // const logout = () => {
-  //   setIsAuth(false);
-  //   setUser(null);
-  //   localStorage.removeItem('tokens');
-  // };
+  const logout = () => {
+    setIsAuth(false);
+    setUser(null);
+    localStorage.removeItem('tokens');
+  };
 
   // const loadUser = async () => {
   //   const userData = await getCurrentUser();
@@ -63,10 +64,10 @@ function Auth({ children }: AuthProps) {
     <AuthContext.Provider
       value={{
         isAuth,
-        // register,
-        // login,
-        // logout,
-        // user,
+        register,
+        login,
+        logout,
+        user,
         // getUserName,
         // loadUser,
         // checkAuthenticated,
