@@ -7,6 +7,8 @@ interface Values {
   email: string;
   password: string;
   location: string;
+  occupation: string;
+  gender: string;
 }
 
 export const validateRegistration = (values: Values) => {
@@ -22,6 +24,14 @@ export const validateRegistration = (values: Values) => {
 
   if (!values.location) {
     errors.location = 'Location required';
+  }
+
+  if (!values.occupation) {
+    errors.occupation = 'Occupation required';
+  }
+
+  if (!values.gender) {
+    errors.gender = 'Gender required';
   }
 
   const loginErrors = validateLogin(values);

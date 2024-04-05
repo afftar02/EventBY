@@ -37,6 +37,8 @@ function AuthForm({
       email: '',
       password: '',
       location: '',
+      occupation: '',
+      gender: '',
     },
     validate: (values) =>
       isSignUp ? validateRegistration(values) : validateLogin(values),
@@ -101,6 +103,26 @@ function AuthForm({
             onClick={() => formik.setFieldError('location', undefined)}
             name={'location'}
             isError={!!formik.errors.location}
+          />
+        )}
+        {isSignUp && (
+          <Input
+            placeholder={formik.errors.occupation ?? 'Occupation'}
+            onChange={formik.handleChange}
+            value={formik.values.occupation}
+            onClick={() => formik.setFieldError('occupation', undefined)}
+            name={'occupation'}
+            isError={!!formik.errors.occupation}
+          />
+        )}
+        {isSignUp && (
+          <Input
+            placeholder={formik.errors.gender ?? 'Gender'}
+            onChange={formik.handleChange}
+            value={formik.values.gender}
+            onClick={() => formik.setFieldError('gender', undefined)}
+            name={'gender'}
+            isError={!!formik.errors.gender}
           />
         )}
         <Input
