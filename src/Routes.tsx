@@ -2,6 +2,7 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { PATHS } from 'constants/paths';
 import Authorization from 'pages/Authorization';
 import Home from 'pages/Home';
+import Registration from 'pages/Registration';
 import AuthorizedRoute from 'utils/AuthorizedRoute';
 import UnauthorizedRoute from 'utils/UnauthorizedRoute';
 
@@ -16,6 +17,14 @@ function AppRoutes() {
         element={
           <UnauthorizedRoute>
             <Authorization />
+          </UnauthorizedRoute>
+        }
+      />
+      <Route
+        path={PATHS.signUp}
+        element={
+          <UnauthorizedRoute>
+            <Registration />
           </UnauthorizedRoute>
         }
       />
