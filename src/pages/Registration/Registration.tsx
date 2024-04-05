@@ -1,15 +1,14 @@
 import { PATHS } from 'constants/paths';
 
 import AuthForm from 'components/AuthForm';
+import Logo from 'components/Logo';
 
-import { LogoContainer, RegistrationContainer } from './styled';
+import { RegistrationContainer } from './styled';
 
 function Registration() {
   return (
     <RegistrationContainer>
-      <LogoContainer>
-        <img src={'images/locals.svg'} alt={'logo'} />
-      </LogoContainer>
+      <Logo />
       <AuthForm
         hint={'Already have an account?'}
         underlinedHint={'Sign In'}

@@ -7,6 +7,3 @@ export const RegistrationContainer = styled.div`
   flex-direction: column;
   height: 100vh;
 `;
-export const LogoContainer = styled.div`
-  width: 150px;
-`;

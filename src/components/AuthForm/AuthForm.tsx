@@ -8,6 +8,7 @@ import { useFormik } from 'formik';
 import { validateLogin } from 'helpers/validateLogin';
 import { validateRegistration } from 'helpers/validateRegistration';
 
+import Button from 'components/Button';
 import Input from 'components/Input';
 import PasswordInput from 'components/PasswordInput';
 
@@ -15,7 +16,6 @@ import {
   FormContainer,
   StyledForm,
   StyledText,
-  SubmitButton,
   TextContainer,
   UnderlinedText,
 } from './styled';
@@ -140,9 +140,7 @@ function AuthForm({
           onClick={() => formik.setFieldError('password', undefined)}
           isError={!!formik.errors.password}
         />
-        <SubmitButton type={'submit'}>
-          {isSignUp ? 'Sign Up' : 'Sign In'}
-        </SubmitButton>
+        <Button type={'submit'}>{isSignUp ? 'Sign Up' : 'Sign In'}</Button>
       </StyledForm>
       <TextContainer>
         <StyledText>{hint}</StyledText>
