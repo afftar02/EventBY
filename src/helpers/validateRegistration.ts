@@ -7,7 +7,6 @@ interface Values {
   email: string;
   password: string;
   location: string;
-  birthDate: string;
 }
 
 export const validateRegistration = (values: Values) => {
@@ -23,10 +22,6 @@ export const validateRegistration = (values: Values) => {
 
   if (!values.location) {
     errors.location = 'Location required';
-  }
-
-  if (!values.birthDate) {
-    errors.birthDate = 'Date of birth required';
   }
 
   const loginErrors = validateLogin(values);
