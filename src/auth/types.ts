@@ -11,6 +11,9 @@ export type RegisterParams = {
   surname: string;
   email: string;
   password: string;
+  location: string;
+  occupation: string;
+  gender: string;
 };
 
 export type LoginParams = {
