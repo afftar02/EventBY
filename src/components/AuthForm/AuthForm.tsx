@@ -129,10 +129,10 @@ function AuthForm({
           onClick={() => formik.setFieldError('password', undefined)}
           isError={!!formik.errors.password}
         />
+        <SubmitButton type={'submit'}>
+          {isSignUp ? 'Sign Up' : 'Sign In'}
+        </SubmitButton>
       </StyledForm>
-      <SubmitButton type={'submit'}>
-        {isSignUp ? 'Sign Up' : 'Sign In'}
-      </SubmitButton>
       <TextContainer>
         <StyledText>{hint}</StyledText>
         {hintLink && (

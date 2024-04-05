@@ -9,7 +9,7 @@ export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 50px;
-  margin: 40px 0;
+  margin-top: 40px;
 `;
 
 export const StyledText = styled.span`
