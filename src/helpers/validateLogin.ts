@@ -11,16 +11,16 @@ export const validateLogin = (values: Values) => {
   const errors: Formik.FormikErrors<Values> = {};
 
   if (!values.email) {
-    errors.email = 'Email required';
+    errors.email = 'Email обязателен';
   } else if (!mailRegex.test(values.email)) {
-    errors.email = 'Invalid email address';
+    errors.email = 'Неверный email';
     values.email = '';
   }
 
   if (!values.password) {
-    errors.password = 'Password required';
+    errors.password = 'Требуется пароль';
   } else if (values.password.length < 4 || values.password.length > 16) {
-    errors.password = 'Password length must be from 4 to 16 characters';
+    errors.password = 'Длина пароля должна составлять от 4 до 16 символов';
     values.password = '';
   }
 

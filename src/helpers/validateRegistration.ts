@@ -15,23 +15,23 @@ export const validateRegistration = (values: Values) => {
   const errors: Formik.FormikErrors<Values> = {};
 
   if (!values.name) {
-    errors.name = 'Name required';
+    errors.name = 'Требуется имя';
   }
 
   if (!values.surname) {
-    errors.surname = 'Surname required';
+    errors.surname = 'Требуется фамилия';
   }
 
   if (!values.location) {
-    errors.location = 'Location required';
+    errors.location = 'Требуется местоположение';
   }
 
   if (!values.occupation) {
-    errors.occupation = 'Occupation required';
+    errors.occupation = 'Требуется профессия';
   }
 
   if (!values.gender) {
-    errors.gender = 'Gender required';
+    errors.gender = 'Требуется пол';
   }
 
   const loginErrors = validateLogin(values);

@@ -15,11 +15,11 @@ function Header() {
       <Logo />
       <HeaderNavigation>
         <nav>
-          <StyledLink to={PATHS.home}>Home</StyledLink>
-          <StyledLink to={PATHS.createEvent}>Create</StyledLink>
-          <StyledLink to={PATHS.profile}>Profile</StyledLink>
+          <StyledLink to={PATHS.home}>Главная</StyledLink>
+          <StyledLink to={PATHS.createEvent}>Создать</StyledLink>
+          <StyledLink to={PATHS.profile}>Профиль</StyledLink>
         </nav>
-        <LogoutButton>Log out</LogoutButton>
+        <LogoutButton>Выйти</LogoutButton>
       </HeaderNavigation>
     </HeaderContainer>
   );

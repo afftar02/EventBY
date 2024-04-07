@@ -10,8 +10,8 @@ function Authorization() {
     <AuthorizationContainer>
       <Logo />
       <AuthForm
-        hint={"Don't have an account yet?"}
-        underlinedHint={'Sign Up'}
+        hint={'У вас еще нет учетной записи?'}
+        underlinedHint={'Зарегистрироваться'}
         hintLink={PATHS.signUp}
       />
     </AuthorizationContainer>

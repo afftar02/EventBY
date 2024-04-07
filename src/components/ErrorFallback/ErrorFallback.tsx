@@ -3,7 +3,7 @@ import { FallbackContainer, FallbackText } from './styled';
 function ErrorFallback() {
   return (
     <FallbackContainer>
-      <FallbackText>Oops... Something went wrong!😢</FallbackText>
+      <FallbackText>Упс... Что-то пошло не так!😢</FallbackText>
     </FallbackContainer>
   );
 }

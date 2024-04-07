@@ -10,8 +10,8 @@ function Registration() {
     <RegistrationContainer>
       <Logo />
       <AuthForm
-        hint={'Already have an account?'}
-        underlinedHint={'Sign In'}
+        hint={'Уже есть учетная запись?'}
+        underlinedHint={'Авторизоваться'}
         hintLink={PATHS.signIn}
         isSignUp={true}
       />

@@ -67,8 +67,8 @@ function AuthForm({
     } catch (err) {
       formik.values.email = '';
       formik.values.password = '';
-      formik.setFieldError('email', 'Invalid email or password');
-      formik.setFieldError('password', 'Invalid email or password');
+      formik.setFieldError('email', 'Неверный email или пароль');
+      formik.setFieldError('password', 'Неверный email или пароль');
     }
   }, [formik, login, navigate]);
 
@@ -77,7 +77,7 @@ function AuthForm({
       <StyledForm onSubmit={formik.handleSubmit}>
         {isSignUp && (
           <Input
-            placeholder={formik.errors.name ?? 'Name'}
+            placeholder={formik.errors.name ?? 'Имя'}
             onChange={formik.handleChange}
             value={formik.values.name}
             onClick={() => formik.setFieldError('name', undefined)}
@@ -87,7 +87,7 @@ function AuthForm({
         )}
         {isSignUp && (
           <Input
-            placeholder={formik.errors.surname ?? 'Surname'}
+            placeholder={formik.errors.surname ?? 'Фамилия'}
             onChange={formik.handleChange}
             value={formik.values.surname}
             onClick={() => formik.setFieldError('surname', undefined)}
@@ -97,7 +97,7 @@ function AuthForm({
         )}
         {isSignUp && (
           <Input
-            placeholder={formik.errors.location ?? 'Location'}
+            placeholder={formik.errors.location ?? 'Местоположение'}
             onChange={formik.handleChange}
             value={formik.values.location}
             onClick={() => formik.setFieldError('location', undefined)}
@@ -107,7 +107,7 @@ function AuthForm({
         )}
         {isSignUp && (
           <Input
-            placeholder={formik.errors.occupation ?? 'Occupation'}
+            placeholder={formik.errors.occupation ?? 'Профессия'}
             onChange={formik.handleChange}
             value={formik.values.occupation}
             onClick={() => formik.setFieldError('occupation', undefined)}
@@ -117,7 +117,7 @@ function AuthForm({
         )}
         {isSignUp && (
           <Input
-            placeholder={formik.errors.gender ?? 'Gender'}
+            placeholder={formik.errors.gender ?? 'Пол'}
             onChange={formik.handleChange}
             value={formik.values.gender}
             onClick={() => formik.setFieldError('gender', undefined)}
@@ -134,13 +134,15 @@ function AuthForm({
           isError={!!formik.errors.email}
         />
         <PasswordInput
-          placeholder={formik.errors.password ?? 'Enter strong password'}
+          placeholder={formik.errors.password ?? 'Введите надежный пароль'}
           onChange={formik.handleChange}
           value={formik.values.password}
           onClick={() => formik.setFieldError('password', undefined)}
           isError={!!formik.errors.password}
         />
-        <Button type={'submit'}>{isSignUp ? 'Sign Up' : 'Sign In'}</Button>
+        <Button type={'submit'}>
+          {isSignUp ? 'Зарегистрироваться' : 'Войти'}
+        </Button>
       </StyledForm>
       <TextContainer>
         <StyledText>{hint}</StyledText>
