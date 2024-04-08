@@ -1,10 +1,10 @@
-import { LogoContainer } from './styled';
+import { LogoText } from './styled';
 
 function Logo() {
   return (
-    <LogoContainer>
-      <img src={'images/locals.svg'} alt={'logo'} />
-    </LogoContainer>
+    <div>
+      <LogoText>EventBY</LogoText>
+    </div>
   );
 }
 
