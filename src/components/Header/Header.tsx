@@ -1,3 +1,5 @@
+import { useAuth } from 'auth';
+import { AuthContextType } from 'auth/types';
 import { PATHS } from 'constants/paths';
 
 import Logo from 'components/Logo';
@@ -10,6 +12,8 @@ import {
 } from './styled';
 
 function Header() {
+  const { logout } = useAuth() as AuthContextType;
+
   return (
     <HeaderContainer>
       <Logo />
@@ -19,7 +23,7 @@ function Header() {
           <StyledLink to={PATHS.createEvent}>Создать</StyledLink>
           <StyledLink to={PATHS.profile}>Профиль</StyledLink>
         </nav>
-        <LogoutButton>Выйти</LogoutButton>
+        <LogoutButton onClick={logout}>Выйти</LogoutButton>
       </HeaderNavigation>
     </HeaderContainer>
   );
