@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { PATHS } from 'constants/paths';
 import Authorization from 'pages/Authorization';
+import Event from 'pages/Event';
 import Home from 'pages/Home';
 import Registration from 'pages/Registration';
 import AuthorizedRoute from 'utils/AuthorizedRoute';
@@ -33,6 +34,14 @@ function AppRoutes() {
         element={
           <AuthorizedRoute>
             <Home />
+          </AuthorizedRoute>
+        }
+      />
+      <Route
+        path={`${PATHS.event}/:id`}
+        element={
+          <AuthorizedRoute>
+            <Event />
           </AuthorizedRoute>
         }
       />

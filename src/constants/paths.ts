@@ -4,4 +4,5 @@ export const PATHS = {
   signIn: '/signin',
   createEvent: '/create',
   profile: '/profile',
+  event: '/event',
 };
