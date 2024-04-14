@@ -1,5 +1,7 @@
 import { PATHS } from 'constants/paths';
 
+import CustomLink from 'components/CustomLink';
+
 import {
   CardContainer,
   EditContainer,
@@ -7,7 +9,6 @@ import {
   InfoContainer,
   InfoText,
   LocationTimeContainer,
-  StyledLink,
   TitleText,
 } from './styled';
 import { EventCardProps } from './types';
@@ -21,7 +22,7 @@ function EventCard({
   showEdit,
 }: EventCardProps) {
   return (
-    <StyledLink to={`${PATHS.event}/1`}>
+    <CustomLink to={`${PATHS.event}/1`}>
       <CardContainer>
         <ImageContainer>
           <img src={image ?? '/images/no-image.png'} alt={'Img'} />
@@ -40,7 +41,7 @@ function EventCard({
           </EditContainer>
         )}
       </CardContainer>
-    </StyledLink>
+    </CustomLink>
   );
 }
 

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { styled } from 'styled-components';
 
 export const CardContainer = styled.div`
@@ -57,9 +56,4 @@ export const EditContainer = styled.div`
   &:hover {
     background-color: #ffff95;
   }
-`;
-
-export const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: unset;
 `;

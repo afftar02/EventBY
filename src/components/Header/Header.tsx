@@ -2,6 +2,7 @@ import { useAuth } from 'auth';
 import { AuthContextType } from 'auth/types';
 import { PATHS } from 'constants/paths';
 
+import CustomLink from 'components/CustomLink';
 import Logo from 'components/Logo';
 
 import {
@@ -16,7 +17,9 @@ function Header() {
 
   return (
     <HeaderContainer>
-      <Logo />
+      <CustomLink to={PATHS.home}>
+        <Logo />
+      </CustomLink>
       <HeaderNavigation>
         <nav>
           <StyledLink to={PATHS.home}>Главная</StyledLink>
