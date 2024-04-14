@@ -2,7 +2,10 @@ import { styled } from 'styled-components';
 
 export const StyledButton = styled.button`
   height: 40px;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
   border: 1px solid #5e5e5e;
   cursor: pointer;
   background-color: #ffff95;
