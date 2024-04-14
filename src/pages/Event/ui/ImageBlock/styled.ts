@@ -1,5 +1,7 @@
 import { styled } from 'styled-components';
 
+import ReturnButton from 'components/ReturnButton';
+
 export const ImageBlockContainer = styled.div`
   height: 300px;
   position: relative;
@@ -40,4 +42,11 @@ export const Title = styled.span`
 export const InfoText = styled.span`
   font-size: 22px;
   font-weight: 500;
+`;
+
+export const StyledReturnButton = styled(ReturnButton)`
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
 `;
